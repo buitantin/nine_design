@@ -14,12 +14,13 @@ class CreateProductTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("name");
-            $table->string("code");
-            $table->string("price")->nullable();
-            $table->enum("status",['0','1'])->default('0');
+            $table->string("name")->nullable();
 
-            $table->integer("cid_cate");
+            $table->enum("status",['0','1'])->default('0');
+            $table->enum("is_hot",['0','1'])->default('0');
+
+            $table->integer("cid_catechild");
+
             $table->text("description")->nullable();
             $table->text("content")->nullable();
             $table->timestamps();

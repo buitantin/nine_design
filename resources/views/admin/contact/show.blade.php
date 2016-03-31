@@ -51,7 +51,7 @@
                                     <th>ID</th>
                                     <th>Tên</th>
                                     <th>Email</th>
-                                    <th>Phone</th>
+                                    <th>Tiêu đề</th>
                                     <th>Nội dung</th>
                                  
                                     
@@ -64,12 +64,12 @@
                                     <td>{{$element['id']}}</td>
                                     <td>{{$element['name']}}</td>
                                     <td>{{$element['email']}}</td>
-                                    <td>{{$element['phone']}}</td>
+                                    <td>{{$element['subject']}}</td>
                                     <td>{{$element['content']}}</td>
                                    
                                     
                                     <td>  
-                                      <a class="label label-success remove-button" href="/admin/contact/detroy/{{$element['id']}}">Xóa</a>
+                                      <a class="label label-success remove-button" href="/admin/contact/remove/{{$element['id']}}">Xóa</a>
                                       <br />
                                       <br />
                                     </td>

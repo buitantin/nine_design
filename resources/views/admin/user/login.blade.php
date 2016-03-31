@@ -5,7 +5,7 @@
 <!-- BEGIN HEAD -->
 <head>
    <meta charset="utf-8" />
-   <title>Shop Trang Sức Kim Châu</title>
+   <title>Nine Design</title>
    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
    <meta content="" name="description" />
    <meta content="" name="author" />
@@ -53,6 +53,7 @@
     {!! Form::open(['class'=>'form-vertical no-padding no-margin','method'=>'post'])!!}
     
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
+      
       <div class="lock">
           <i class="icon-lock"></i>
       </div>
@@ -62,7 +63,6 @@
           <div class="control-group">
               <div class="controls">
                   <div class="input-prepend">
-                      <span class="add-on"><i class="icon-user"></i></span>
                       {!! Form::text("username",@$data['username'],array("placeholder"=>"Tên đăng nhập") ) !!}
 
                   </div>
@@ -71,7 +71,6 @@
           <div class="control-group">
               <div class="controls">
                   <div class="input-prepend">
-                      <span class="add-on"><i class="icon-key"></i></span>
                       {!! Form::password("password",array("placeholder"=>"Mật khẩu" ) )!!}
                   </div>
                 

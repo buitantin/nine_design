@@ -4,15 +4,14 @@
                <div class="span12">
                   
                   <h3 class="page-title">
-                     Quản lý sản phẩm 
-                     <small>Quản lý sản phẩm</small>
+                    Sản Phẩm
                   </h3>
                    <ul class="breadcrumb">
                        <li>
                            <a href="/" target="_black"><i class="icon-home"></i></a><span class="divider">&nbsp;</span>
                        </li>
                        
-                       <li><a href="#">Danh sách sản phẩm</a><span class="divider-last">&nbsp;</span></li>
+                       <li><a href="#">Danh sách Sản Phẩm</a><span class="divider-last">&nbsp;</span></li>
                    </ul>
                </div>
             </div>
@@ -61,8 +60,8 @@
                                     <th>ID</th>
                                     <th>Hình ảnh</th>
                                     <th>Tên sản phẩm</th>
-                                    <th>Gía bán</th>
-                                    <th>Trang chủ</th>
+                                    <th>Danh mục</th>
+                                    <th>Hiển thị</th>
                                     
                                     <th>Trạng thái</th>
                                 </tr>
@@ -75,9 +74,9 @@
                                       <div>
                                           <div class="thumbnail">
                                             <div class="item">
-                                              <a class="fancybox-button" data-rel="fancybox-button" title="Photo" href="{{PRODUCT_BIG_URL.'product_'.$product['id'].'.jpg'}}">
+                                              <a class="fancybox-button" data-rel="fancybox-button" title="Photo" href="{{PRODUCT_BIG_URL.'product_'.$product['id'].'.jpg'}}?111.111">
                                                 <div class="zoom">
-                                                  <img src="{{PRODUCT_SMALL_URL.'product_'.$product['id'].'.jpg'}}" alt="Photo">
+                                                  <img src="{{PRODUCT_SMALL_URL.'product_'.$product['id'].'.jpg'}}?111.111" alt="Photo">
                                                   <div class="zoom-icon"></div>
                                                 </div>
                                               </a>
@@ -87,14 +86,16 @@
 
                                  </td>
                                     <td>{{$product['name']}}</td>
-                                    <td>{{app\Library\Data::toPrice($product['price'])}}</td>
-                                    <td>{{ ($product['is_home']=='1') ? 'Có' : 'Không'}}</td>
+                                    <td>{{@App\Catechild::find($product['cid_catechild'])->name}}</td>
+                                    <td>{{ ($product['status']=='0') ? 'Có' : 'Không'}}</td>
                                     <td>  
-                                      <a class="label label-success remove-button" href="/admin/product/detroy/{{$product['id']}}">Xóa</a>
-                                      <br />
-                                      <br />
-                                      <br />
+                                    
+                                     
                                       <a class="label label-info" href="/admin/product/edit/{{$product['id']}}">Sửa</a>
+                                       <br />
+                                      <br />
+                                      <br />
+                                        <a class="label label-success remove-button" href="/admin/product/remove/{{$product['id']}}">Xóa</a>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -1,0 +1,208 @@
+.width100{
+	width:100%;
+	float: left;
+}
+.col_20{
+	width:20%;
+	float: left;
+}
+.photo_tabparent{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.box_tab_child{
+	width: 100%;
+	float: left;
+	position: relative;
+}
+.box_tab_child > ul.tabs_child_head{
+	    width: 416px;
+    float: left;
+    border-bottom: 2px solid #c9c9c9;
+    margin-bottom: 25px;
+    margin-left: 12%;
+}
+.box_tab_child > ul > li{
+	line-height: 18px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-right: 48px;
+}
+.box_tab_child > ul > li > a{
+	font-weight: bold;
+	color: #6091b6;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.box_tab_child > ul > li.active_tabs > a{
+	margin-bottom: -8px;
+	border-bottom: 2px solid #fd0707;
+	float: left;
+}
+.box_tab_child > ul > li:last-child{
+	padding-right: 0;
+}
+.content_box_child, .body_child_main{
+	width: 100%;
+	float: left;
+}
+.body_child_main > p{
+	line-height: 25px;
+	margin-left: 12%;
+	margin-right: 12%;
+}
+.body_child_main > ul{
+	width:100%;
+	float: left;
+	margin-top: 16px;
+}
+.btn_nexttabs{
+	cursor: pointer;
+	position: absolute;
+	right: 80px;
+	top: 95px;
+}
+i.arrow_nexttabs{
+	background: transparent url("../img/icon-next.png") no-repeat scroll left center;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+.content_main .header_tab ul li{
+	float:left;
+	cursor:pointer;
+	vertical-align: middle;
+	text-align: center;
+}
+.content_main .header_tab ul li a img{
+	max-width: 100%;
+	height: auto;
+}
+.content_main .header_tab ul li a p{
+	text-align:center;
+	height:25px;
+	width:100%;
+	text-transform:uppercase;
+	color:#e4371d;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 36px;
+}
+.content_main .header_tab ul li.tab_current{
+	float:left;
+}
+.content_main .header_tab ul li.tab_current a p, .content_main .header_tab ul li:hover a p {
+	height:25px;
+	width:100%;
+    transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    margin-top: 34px;
+    float: left;
+    font-weight: bold;
+    padding-left: 30px;
+	padding-right: 30px;
+}
+.content_main .header_tab ul {
+    border-bottom: 2px solid #c9c9c9;
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+}
+.content_main .header_tab ul li a img{
+	max-width: 100%;
+	height: auto;;
+}
+.line_box{
+	width:50%;
+	float:left;
+	height: 34px;
+	border-right:2px solid #c9c9c9;
+	margin-top: 0px;
+	display:none;
+}
+.content_main .header_tab ul li.tab_current .line_box {
+	display:block;
+}
+.box_content_my{
+	padding-top: 12px;
+	padding-bottom: 20px;
+}
+.box_content_my .boxstore_content{
+	font-size:12px;
+	color:#606060;
+	line-height:22px;
+	width: 100%;
+	float: left;
+}
+.boxstore_content .content_box_child ul li{
+	width:50%;
+	float: left;
+}
+.content_box_child figure p {
+	text-align: center;
+	vertical-align: middle;
+}
+.boxstore_content .content_box_child figure img{
+	max-width: 100%;
+	height: auto;
+}
+.boxstore_content .content_box_child figure figcaption{
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 11px;
+	margin-bottom: 25px;
+}
+.box_read {
+	margin-top: 20px;
+	width: 100%;
+	float: left;
+}
+.btn_readmore{
+	background: transparent url("../img/bg-xemtiep.png") no-repeat scroll center top;
+	width: 136px;
+	height: 63px;
+	float: right;
+	padding-left: 45px;
+	padding-top: 25px;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	margin-right: 85px;
+}
+.box_send_img{
+	width:100%;
+	float: left;
+	-webkit-box-shadow: 1px 0px 7px 0px rgba(153,151,153,1);
+	-moz-box-shadow: 1px 0px 7px 0px rgba(153,151,153,1);
+	box-shadow: 1px 0px 7px 0px rgba(153,151,153,1);
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.upload_file_img {
+    width: 93px;
+    height: 126px;
+    background: url("../img/img-upload.png");
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.upload_file_img input[type="file"] {
+    opacity: 0;
+    overflow: hidden;
+    display: block;
+    width: 93px;
+    height: 126px;
+    cursor: pointer;
+}
+p.uploadfile, p.numpage{
+	font-weight: bold;
+	color: #6091b6;
+}
+p.uploadfile{
+	margin-bottom: 40px;
+}
+.col_uploadfile > input{
+	width:20%;
+}
+/*# sourceMappingURL=home.css.map */

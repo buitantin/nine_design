@@ -11,24 +11,30 @@ use App\Page;
 class PageController extends Controller
 {
     //
-    public function add(Request $request){
+    public function add($id,Request $request){
     	$data=array();
     	$error=array();
+
+
     	if($request->isMethod("post")){
     		$data=$request->all();
+            if(empty($data['name'])){
+                $error['name']="Vui lòng nhập tên trang";
+            }
+            if(empty($error)){
+                $updated=Page::findOrNew($id);
+                $updated->name=$data['name'];
+                $updated->content=$data['content'];
+                $updated->save();
+                return redirect()->back()->with("success","Cập nhật thành công");
+            }
 
-
-
+            
     	}
-    	return View("admin.page.add",['data'=>$data,"error"=>$error]);
+
+        $data=Page::find($id);
+
+    	return View("admin.page.edit",['data'=>$data,"error"=>$error]);
     }
-    public function show(){
-    	return View("admin.page.show");
-    }
-    public function remove($id){
-    	return Page::find($id)->delete();
-    }
-    public function edit($id){
-    	return View("admin.page.edit");
-    }
+  
 }

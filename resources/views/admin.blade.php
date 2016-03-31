@@ -5,7 +5,17 @@
 <!-- BEGIN HEAD -->
 <head>
    <meta charset="utf-8" />
-   <title>Nine </title>
+   <title>Nine Design </title>
+     <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+     <meta http-equiv="Cache-Control" content="no-store" />
+     <meta http-equiv="cache-control" content="max-age=0" />
+      <meta http-equiv="cache-control" content="no-cache" />
+      <meta http-equiv="expires" content="0" />
+      <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+      <meta http-equiv="pragma" content="no-cache" />
+       <META HTTP-EQUIV="Expires" CONTENT="-1">
+       
+
    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
    <meta content="" name="description" />
    <meta content="" name="author" />
@@ -78,6 +88,25 @@
    <!-- END CONTAINER -->
     @include('admin.layout.footer')
    
+@if ( session("success"))
+   <!-- Button to trigger modal -->
+ 
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Nine Design</h3>
+  </div>
+  <div class="modal-body">
+    <p>{{session("success")}}</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">OK</button>
+  </div>
+</div>
+<script type="text/javascript">  $('#myModal').modal('show');  </script>
+
+@endif
 </body>
 <!-- END BODY -->
 </html>

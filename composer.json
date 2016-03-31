@@ -8,8 +8,9 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.2.*",
-        "folklore/image": "0.2.*",
-        "guzzlehttp/guzzle": "~5.0"
+        "folklore/image": "0.3.*",
+        "guzzlehttp/guzzle": "~5.0",
+        "captcha-com/laravel-captcha": "4.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -24,7 +25,10 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/Library/Data.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [

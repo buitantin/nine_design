@@ -82,6 +82,78 @@
                                     </div>
                                 </div>
 
+                                <div class="control-group">
+                                    <label class="control-label">HOTLINE</label>
+                                    <div class="controls">
+                                        {!! Form::text("hotline",@$data['hotline'],['class'=>"input-xxlarge",'placeholder'=>''])!!}
+                                        <span class="help-inline" style='color:red'>*</span>
+                                           @if(!empty($error['hotline']))
+                                            <p class="help-inline" style='color:red'>{{$error['hotline']}}</p>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                 <div class="control-group">
+                                    <label class="control-label">Hình ảnh</label>
+                                    <div class="controls">
+                                        {!! Form::text("picture",@$data['picture'],['class'=>"input-xxlarge",'placeholder'=>''])!!}
+                                        <span class="help-inline" style='color:red'>*</span>
+                                           @if(!empty($error['picture']))
+                                            <p class="help-inline" style='color:red'>{{$error['picture']}}</p>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                 <div class="control-group">
+                                    <label class="control-label">Facebook</label>
+                                    <div class="controls">
+                                        {!! Form::text("facebook",@$data['facebook'],['class'=>"input-xxlarge",'placeholder'=>''])!!}
+                                        <span class="help-inline" style='color:red'>*</span>
+                                           @if(!empty($error['facebook']))
+                                            <p class="help-inline" style='color:red'>{{$error['facebook']}}</p>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                 <div class="control-group">
+                                    <label class="control-label">Skype</label>
+                                    <div class="controls">
+                                        {!! Form::text("skype",@$data['skype'],['class'=>"input-xxlarge",'placeholder'=>''])!!}
+                                        <span class="help-inline" style='color:red'>*</span>
+                                           @if(!empty($error['skype']))
+                                            <p class="help-inline" style='color:red'>{{$error['skype']}}</p>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                 <div class="control-group">
+                                    <label class="control-label">Twitter</label>
+                                    <div class="controls">
+                                        {!! Form::text("twitter",@$data['twitter'],['class'=>"input-xxlarge",'placeholder'=>''])!!}
+                                        <span class="help-inline" style='color:red'>*</span>
+                                           @if(!empty($error['twitter']))
+                                            <p class="help-inline" style='color:red'>{{$error['twitter']}}</p>
+                                        @endif
+                                    </div>
+                                </div>
+
+
+                                 <div class="control-group">
+                                    <label class="control-label">google</label>
+                                    <div class="controls">
+                                        {!! Form::text("google",@$data['google'],['class'=>"input-xxlarge",'placeholder'=>''])!!}
+                                        <span class="help-inline" style='color:red'>*</span>
+                                           @if(!empty($error['google']))
+                                            <p class="help-inline" style='color:red'>{{$error['google']}}</p>
+                                        @endif
+                                    </div>
+                                </div>
+
+
+
+
+
+
 
                                    <div class="control-group">
                                     <label class="control-label">Mô tả seo</label>

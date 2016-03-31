@@ -156,8 +156,9 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Folklore\Image\ImageServiceProvider::class,
 
-
+        LaravelCaptcha\Providers\LaravelCaptchaServiceProvider::class,
     ],
 
     /*
@@ -205,7 +206,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-
+        'Image' => Folklore\Image\Facades\Image::class,
     ],
 
 ];

@@ -13,7 +13,10 @@
    <!-- BEGIN JAVASCRIPTS -->    
    <!-- Load javascripts at bottom, this will reduce page load time -->
    <script src="{{ asset('/public/admin/js/jquery-1.8.2.min.js') }}"></script>    
-   <script type="text/javascript" src="{{ asset('/public/admin/assets/ckeditor/ckeditor.js') }}"></script>
+   
+   <!-- <script type="text/javascript" src="{{ asset('/public/admin/assets/ckeditor/ckeditor.js') }}"></script> -->
+
+   
    <script src="{{ asset('/public/admin/assets/bootstrap/js/bootstrap.min.js') }}"></script>
    <script type="text/javascript" src="{{ asset('/public/admin/assets/bootstrap/js/bootstrap-fileupload.js') }}"></script>
    <script src="{{ asset('/public/admin/js/jquery.blockui.js') }}"></script>
@@ -42,7 +45,12 @@
 
    <script  type="text/javascript" src="{{ asset('/public/admin/js/scripts.js') }}"></script>
 
+  
+
+   <script  type="text/javascript" src="{{ asset('/public/ckeditor/ckeditor.js') }}"></script>
    <script  type="text/javascript" src="{{ asset('/public/admin/js/function.js') }}"></script>
+
+   
    <script>
       jQuery(document).ready(function() {       
          // initiate layout and plugins
@@ -78,31 +86,48 @@
                       $(this).parent().parent().remove();
                       return false;
          });
-         initEditor("myeditor");
+         if($("#myeditor").length){
+          initEditor("myeditor"); 
+         }
+         if($("#mybasiceditor").length){
+           initEditorBasic("mybasiceditor");
+        }
 
       });
    </script>
    <!-- END JAVASCRIPTS -->   
+<!-- 
+   <script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var span = document.createElement('span');
+          span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            '" title="', escape(theFile.name), '"/>'].join('');
+          document.getElementById('list').insertBefore(span, null);
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+  document.getElementById('images').addEventListener('change', handleFileSelect, false);
+</script> -->
 
 
-
-@if(session("success"))
-   <!-- Button to trigger modal -->
-<a href="#myModal" role="button" class="btn" data-toggle="modal">Nine Design</a>
- 
-<!-- Modal -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Nine Design</h3>
-  </div>
-  <div class="modal-body">
-    <p>{{session("success")}}</p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">OK</button>
-  </div>
-</div>
-<script type="text/javascript">  $('#myModal').modal('show');  </script>
-
-@endif

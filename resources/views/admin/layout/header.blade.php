@@ -5,7 +5,7 @@
            <div class="container-fluid">
                <!-- BEGIN LOGO -->
                <a class="brand" href="/" target="_black">
-                   <img src="/public/default/img/logo.png" alt="Thiết kế " />
+                   <img src="/public/default/img/logo.png" alt="Thiết kế " style="width:100px;" />
                </a>
                <!-- END LOGO -->
                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
@@ -26,7 +26,7 @@
                        <!-- BEGIN USER LOGIN DROPDOWN -->
                        <li class="dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <span class="username">Auth::user()->name</span>
+                               <span class="username"> {{Auth::user()->name }}</span>
                                <b class="caret"></b>
                            </a>
                            <ul class="dropdown-menu">

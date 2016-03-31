@@ -3,7 +3,7 @@ function initEditor(el){
 		resize_enabled: false,
 		language:   "en",
 		height : 300,
-		width:1190,
+		width:1000,
 		filebrowserBrowseUrl :      "http://"+window.location.host+'/public/admin/assets/ckeditor/ckfinder/ckfinder.html',
 		filebrowserImageBrowseUrl : "http://"+window.location.host+'/public/admin/assets/ckeditor/ckfinder/ckfinder.html?Type=Images',
 		filebrowserFlashBrowseUrl : "http://"+window.location.host+'/public/admin/assets/ckeditor/ckfinder/ckfinder.html?Type=Flash',

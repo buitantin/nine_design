@@ -4,8 +4,7 @@
                <div class="span12">
                   
                   <h3 class="page-title">
-                     Quản lý sản phẩm 
-                     <small>Quản lý sản phẩm</small>
+                   Sản phẩm
                   </h3>
                    <ul class="breadcrumb">
                        <li>
@@ -43,14 +42,14 @@
                                 </div>
 
                                  <div class="control-group ">
-                                  <label class="control-label">Hiển thị trang chủ</label>
+                                      <label class="control-label">Hiện thị</label>
                                   <div class="controls">
                                      <label class="radio">
-                                       {!! Form::radio("is_home",'1',($data['is_home']=='1') ? true : false ) !!}
+                                       {!! Form::radio("status",'0',($data['status']=='0') ? true : false ) !!}
                                       Có
                                      </label>
                                      <label class="radio">
-                                       {!! Form::radio("is_home",'0',($data['is_home']=='0') ? true : false ) !!}
+                                       {!! Form::radio("status",'1',($data['status']=='1') ? true : false ) !!}
                                       Không
                                      </label>  
 
@@ -60,84 +59,6 @@
                                   </div>
                                </div>
 
-
-
-
-                                 <div class="control-group ">
-                                  <label class="control-label">Trang sức đá màu</label>
-                                  <div class="controls">
-                                     <label class="radio">
-                                       {!! Form::radio("is_color",'1',($data['is_color']=='1') ? true : false ) !!}
-                                      Có
-                                     </label>
-                                     <label class="radio">
-                                       {!! Form::radio("is_color",'0',($data['is_color']=='0') ? true : false ) !!}
-                                      Không
-                                     </label>  
-
-                                  
-                                  
-                                     
-                                  </div>
-                               </div>
-
-
-                                 <div class="control-group ">
-                                  <label class="control-label">Trang sức mới</label>
-                                  <div class="controls">
-                                     <label class="radio">
-                                       {!! Form::radio("is_new",'1',($data['is_new']=='1') ? true : false ) !!}
-                                      Có
-                                     </label>
-                                     <label class="radio">
-                                       {!! Form::radio("is_new",'0',($data['is_new']=='0') ? true : false ) !!}
-                                      Không
-                                     </label>  
-
-                                  
-                                  
-                                     
-                                  </div>
-                               </div>
-
-
-
-                                 <div class="control-group ">
-                                  <label class="control-label">Trang sức bộ</label>
-                                  <div class="controls">
-                                     <label class="radio">
-                                       {!! Form::radio("is_group",'1',($data['is_group']=='1') ? true : false ) !!}
-                                      Có
-                                     </label>
-                                     <label class="radio">
-                                       {!! Form::radio("is_group",'0',($data['is_group']=='0') ? true : false ) !!}
-                                      Không
-                                     </label>  
-
-                                  
-                                  
-                                     
-                                  </div>
-                               </div>
-
-
- <div class="control-group ">
-                                  <label class="control-label">Trang sức cưới</label>
-                                  <div class="controls">
-                                     <label class="radio">
-                                       {!! Form::radio("is_wedding",'1',($data['is_wedding']=='1') ? true : false ) !!}
-                                      Có
-                                     </label>
-                                     <label class="radio">
-                                       {!! Form::radio("is_wedding",'0',($data['is_wedding']=='0') ? true : false ) !!}
-                                      Không
-                                     </label>  
-
-                                  
-                                  
-                                     
-                                  </div>
-                               </div>
 
 
 
@@ -200,50 +121,14 @@
                                     </div>
                                 </div>
 
-                                <div class="control-group @if(!empty($error['price'])) error @endif">
-                                    <label class="control-label">Giá</label>
-                                    <div class="controls">
-                                        {!! Form::number("price",@$data['price'],['class'=>"input-xxlarge",'placeholder'=>'Giá'])!!}
-                                         <span class="help-inline" style='color:red'>* @if(!empty($error['price'])) {{$error['price']}} @endif </span>
-                                    </div>
-                                </div>
-
-                                <div class="control-group @if(!empty($error['code'])) error @endif">
-                                    <label class="control-label">Mã Sản Phẩm</label>
-                                    <div class="controls">
-                                        {!! Form::text("code",@$data['code'],['class'=>"input-xxlarge",'placeholder'=>'Mã Sản Phẩm'])!!}
-                                        <span class="help-inline" style='color:red'>* @if(!empty($error['code'])) {{$error['code']}} @endif </span>
-                                    </div>
-                                </div>
-                                <div class="control-group">
+                              
+                           <div class="control-group @if(!empty($error['code'])) error @endif">
                                     <label class="control-label">Danh mục</label>
                                     <div class="controls">
-                                        {!! Form::select("cate",$listcate,@$data['cid_cate'],['class'=>"input-xxlarge",'placeholder'=>''])!!}
+                                        {!! Form::select("cid_catechild",$listcate,@$data['cid_catechild'])!!}
+                                        <span class="help-inline" style='color:red'>* @if(!empty($error['cid_catechild'])) {{$error['cid_catechild']}} @endif </span>
                                     </div>
                                 </div>
-
-                                <div class="control-group">
-                                    <label class="control-label">Loại đá</label>
-                                    <div class="controls">
-                                        {!! Form::select("stone",$liststone,@$data['cid_stone'],['class'=>"input-xxlarge",'placeholder'=>''])!!}
-                                    </div>
-                                </div>
-
-                                 <div class="control-group">
-                                    <label class="control-label">Size đá</label>
-                                    <div class="controls">
-                                        {!! Form::select("sizestone",$listsizestone,@$data['cid_size'],['class'=>"input-xxlarge",'placeholder'=>''])!!}
-                                    </div>
-                                </div>
-
-
-                                   <div class="control-group">
-                                    <label class="control-label">Chất liệu</label>
-                                    <div class="controls">
-                                        {!! Form::select("material",$listmaterial,@$data['cid_material'],['class'=>"input-xxlarge",'placeholder'=>'Địa chỉ'])!!}
-                                    </div>
-                                </div>
-
                                 
                                
 
@@ -251,12 +136,22 @@
                              <div class="control-group">
                                     <label class="control-label">Mô tả</label>
                                     <div class="controls">
-                                        {!! Form::textarea("description",@$data['description'],['class'=>"span9 wysihtml5" ,'placeholder'=>'description'])!!}
+                                        {!! Form::textarea("description",@$data['description'],['class'=>"span9 " ,'placeholder'=>'description'])!!}
                                         <span class="help-inline" style='color:red'>* @if(!empty($error['description'])) {{$error['description']}} @endif </span>
                                     </div>
                                 </div>
 
-                                
+                                          <div class="control-group">
+                                    <label class="control-label">Nội dung</label>
+                                   
+                                </div>
+
+                                 <div class="">
+                                        {!! Form::textarea("content",@$data['content'],['class'=>"span9 " ,'placeholder'=>'','id'=>"myeditor"])!!}
+                                        <span class="help-inline" style='color:red'>@if(!empty($error['content'])) {{$error['content']}} @endif </span>
+                                    </div>
+                              
+                          
                              
                           
                             <!-- END FORM-->
@@ -265,48 +160,7 @@
                     <!-- END SAMPLE FORM PORTLET-->
                 </div>
 </div>
- <div class="row-fluid">
-                  <div class="span12 sortable">
-                    <!-- BEGIN SAMPLE FORMPORTLET-->
-                    <div class="widget">
-                        <div class="widget-title">
-                            <h4><i class="icon-reorder"></i></h4>
-                            
-                        </div>
-                        <div class="widget-body">
-                            <!-- BEGIN FORM-->
-                            <h3>Vật liệu</h3>
-                            @foreach($listmaterial as $key=>$material)
-                              @if($key!="")
-                                 <div class="control-group">
-                                    <label class="control-label">{{$material}}</label>
-                                    <div class="controls">
-                                        {!! Form::number("m[$key]",@$allvalue[$key],['class'=>"input-xxlarge",'placeholder'=>'Giá tính tiền'])!!}
-                                       
-                                    </div>
-                                </div>
-                               @endif
-                            @endforeach
 
-                            <h3>Loại đá</h3>
-
-
-                            @foreach($liststone as $k=>$st)
-                              @if($k!="")
-                                 <div class="control-group">
-                                    <label class="control-label">{{$st}}</label>
-                                    <div class="controls">
-                                        {!! Form::number("st[$k]",@$allvalue[$k],['class'=>"input-xxlarge",'placeholder'=>'Giá tính tiền'])!!}
-                                       
-                                    </div>
-                                </div>
-                               @endif
-                            @endforeach
-                       </div>
-               </div>
-              </div>
-
-            </div>
 
              <div class="row-fluid">
                   <div class="span12 sortable">
